@@ -40,7 +40,7 @@ app.Animation = (function () {
 		.set("#outline", {display:"none"}, "+=.5")
 		.set("#solid", {display:"none"})
 
-		.to(tl2, 2, {progress:1, ease: Sine.easeInOut}, "+=.5");
+		.to(tl2, 2, {progress:1, ease: Linear.easeNone}, "+=.5");
 
 		tl2.set("#_1", {display:"block"})
 		.set("#_2", {display:"block"}, "+=.1")
