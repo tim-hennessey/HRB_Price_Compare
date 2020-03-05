@@ -5,11 +5,7 @@ app.Animation = (function () {
 
 	var banner = document.getElementById('banner');
 	var t = TweenMax;
-	var tl1 = new TimelineMax();
-	var tl2 = new TimelineMax({paused:true});
-
-	// var txt1a = document.getElementById('txt1a');
-
+	var tl1 = new TimelineMax({repeat:-1});
 	var cta = document.getElementById('cta');
 	var cta_txt = document.getElementsByClassName('cta_txt');
 	var buttonExit = document.getElementById('button-exit');
@@ -42,10 +38,7 @@ app.Animation = (function () {
 		.set("#outline", {display:"block"}, "+=.5")
 		.set("#outline", {display:"none"}, "+=.5")
 		.set("#solid", {display:"none"})
-
-		.to(tl2, 2, {progress:1, ease: Linear.easeNone}, "+=.5");
-
-		tl2.set("#_1", {display:"block"})
+		.set("#_1", {display:"block"})
 		.set("#_2", {display:"block"}, "+=.1")
 		.set("#_3", {display:"block"}, "+=.1")
 		.set("#_4", {display:"block"}, "+=.1")
@@ -64,8 +57,9 @@ app.Animation = (function () {
 		.set("#_17", {display:"block"}, "+=.1")
 		.set("#_18", {display:"block"}, "+=.1")
 		.set("#_19", {display:"block"}, "+=.1")
-		.set("#_20", {display:"block"}, "+=.1");
-
+		.set("#_20", {display:"block"}, "+=.1")
+		.set(".dollar", {display:"none"}, "+=1");
+		
 	}
 
 
